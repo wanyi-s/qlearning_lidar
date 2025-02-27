@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-
+# learning_node
 import rospy
 from time import time
 from time import sleep
@@ -7,8 +7,8 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 import sys
-DATA_PATH = '/home/maestro/catkin_ws/src/master_rad/Data'
-MODULES_PATH = '/home/maestro/catkin_ws/src/master_rad/scripts'
+DATA_PATH = '/home/admin520/summit_ws/src/master_rad/Data'
+MODULES_PATH = '/home/admin520/summit_ws/src/master_rad/scripts'
 sys.path.insert(0, MODULES_PATH)
 
 from Qlearning import *
@@ -16,7 +16,7 @@ from Lidar import *
 from Control import *
 
 # Episode parameters
-MAX_EPISODES = 400
+MAX_EPISODES = 60
 MAX_STEPS_PER_EPISODE = 500
 MIN_TIME_BETWEEN_ACTIONS = 0.0
 
@@ -32,18 +32,20 @@ EPSILON_INIT = 0.9
 EPSILON_GRAD = 0.96
 EPSILON_MIN = 0.05
 
+# modify
 # 1 - Softmax , 2 - Epsilon greedy
-EXPLORATION_FUNCTION = 1
+EXPLORATION_FUNCTION = 2
 
+# modify
 # Initial position
-X_INIT = -0.4
-Y_INIT = -0.4
-THETA_INIT = 45.0
+X_INIT = 0
+Y_INIT = 2
+THETA_INIT = 0
 
 RANDOM_INIT_POS = False
 
 # Log file directory
-LOG_FILE_DIR = DATA_PATH + '/Log_learning'
+LOG_FILE_DIR = DATA_PATH + '/Log_learning_test'
 
 # Q table source file
 Q_SOURCE_DIR = ''
@@ -169,15 +171,17 @@ if __name__ == '__main__':
         rate = rospy.Rate(10)
 
         setPosPub = rospy.Publisher('/gazebo/set_model_state', ModelState, queue_size = 10)
-        velPub = rospy.Publisher('/cmd_vel', Twist, queue_size = 10)
+        velPub = rospy.Publisher('/robot/robotnik_base_control/cmd_vel', Twist, queue_size = 10)
 
         initLearning()
         initParams()
+	
         #sleep(5)
 
         # main loop
         while not rospy.is_shutdown():
-            msgScan = rospy.wait_for_message('/scan', LaserScan)
+            msgScan = rospy.wait_for_message('/robot/front_laser/scan', LaserScan)
+	    # print("scan ok")
 
 
             # Secure the minimum time interval between 2 actions
@@ -237,7 +241,7 @@ if __name__ == '__main__':
                         robotStop(velPub)
                         if crash:
                             # get crash position
-                            odomMsg = rospy.wait_for_message('/odom', Odometry)
+                            odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
                             ( x_crash , y_crash ) = getPosition(odomMsg)
                             theta_crash = degrees(getRotation(odomMsg))
 
@@ -286,6 +290,7 @@ if __name__ == '__main__':
                             EPSILON = EPSILON_GRAD * EPSILON
                         episode = episode + 1
                     else:
+			# print("begin training 1")
                         ep_steps = ep_steps + 1
                         # Initial position
                         if not robot_in_pos:
@@ -296,19 +301,28 @@ if __name__ == '__main__':
                             if RANDOM_INIT_POS:
                                 ( x_init , y_init , theta_init ) = robotSetRandomPos(setPosPub)
                             else:
+				# print("init pos")
                                 ( x_init , y_init , theta_init ) = robotSetPos(setPosPub, X_INIT, Y_INIT, THETA_INIT)
 
-                            odomMsg = rospy.wait_for_message('/odom', Odometry)
+                            odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
                             ( x , y ) = getPosition(odomMsg)
                             theta = degrees(getRotation(odomMsg))
+			    # print(x)
+                            # print(x_init)
+                            # print(y)
+                            # print(y_init)
+                            # print(theta)
+                            # print(theta_init)
                             # check init pos
                             if abs(x-x_init) < 0.01 and abs(y-y_init) < 0.01 and abs(theta-theta_init) < 1:
                                 robot_in_pos = True
                                 #sleep(2)
                             else:
-                                robot_in_pos = False
+                                robot_in_pos = True
                         # First acion
+			
                         elif not first_action_taken:
+			    # print("actioin begin")
                             ( lidar, angles ) = lidarScan(msgScan)
                             ( state_ind, x1, x2 ,x3 ,x4 ) = scanDiscretization(state_space, lidar)
                             crash = checkCrash(lidar)
@@ -319,6 +333,7 @@ if __name__ == '__main__':
                                 ( action, status_strat ) = epsiloGreedyExploration(Q_table, state_ind, actions, T)
 
                             status_rda = robotDoAction(velPub, action)
+			    print("first action")
 
                             prev_lidar = lidar
                             prev_action = action
@@ -371,3 +386,4 @@ if __name__ == '__main__':
         robotStop(velPub)
         print('Simulation terminated!')
         pass
+

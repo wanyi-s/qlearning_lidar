@@ -7,8 +7,8 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 import sys
-DATA_PATH = '/home/maestro/catkin_ws/src/master_rad/Data'
-MODULES_PATH = '/home/maestro/catkin_ws/src/master_rad/scripts'
+DATA_PATH = '/home/admin520/summit_ws/src/master_rad/Data'
+MODULES_PATH = '/home/admin520/summit_ws/src/master_rad/scripts'
 sys.path.insert(0, MODULES_PATH)
 
 from Control import *
@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
         # init topics
         setPosPub = rospy.Publisher('/gazebo/set_model_state', ModelState, queue_size = 10)
-        velPub = rospy.Publisher('/cmd_vel', Twist, queue_size = 10)
+        velPub = rospy.Publisher('/robot/robotnik_base_control/cmd_vel', Twist, queue_size = 10)
 
         # init log files
         log_sim_params = open(LOG_DIR+'/LogSimParams.txt','w+')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         while not rospy.is_shutdown():
 
             # Wait for odometry message
-            odomMsg = rospy.wait_for_message('/odom', Odometry)
+            odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
 
             # Get robot position and orientation
             ( x , y ) = getPosition(odomMsg)

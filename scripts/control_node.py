@@ -7,8 +7,8 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 import sys
-DATA_PATH = '/home/maestro/catkin_ws/src/master_rad/Data'
-MODULES_PATH = '/home/maestro/catkin_ws/src/master_rad/scripts'
+DATA_PATH = '/home/admin520/summit_ws/src/master_rad/Data'
+MODULES_PATH = '/home/admin520/summit_ws/src/master_rad/scripts'
 sys.path.insert(0, MODULES_PATH)
 
 from Qlearning import *
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         rate = rospy.Rate(10)
 
         setPosPub = rospy.Publisher('/gazebo/set_model_state', ModelState, queue_size = 10)
-        velPub = rospy.Publisher('/cmd_vel', Twist, queue_size = 10)
+        velPub = rospy.Publisher('/robot/robotnik_base_control/cmd_vel', Twist, queue_size = 10)
 
         actions = createActions()
         state_space = createStateSpace()
@@ -86,8 +86,8 @@ if __name__ == '__main__':
 
         # main loop
         while not rospy.is_shutdown():
-            msgScan = rospy.wait_for_message('/scan', LaserScan)
-            odomMsg = rospy.wait_for_message('/odom', Odometry)
+            msgScan = rospy.wait_for_message('/robot/front_laser/scan', LaserScan)
+            odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
 
             # Secure the minimum time interval between 2 actions
             step_time = (rospy.Time.now() - t_step).to_sec()
@@ -100,7 +100,7 @@ if __name__ == '__main__':
                     # init pos
                     if REAL_ROBOT:
                         ( x_init , y_init , theta_init ) = (0, 0, 0)
-                        odomMsg = rospy.wait_for_message('/odom', Odometry)
+                        odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
                         ( x , y ) = getPosition(odomMsg)
                         theta = degrees(getRotation(odomMsg))
                         robot_in_pos = True
@@ -115,7 +115,7 @@ if __name__ == '__main__':
                         else:
                             ( x_init , y_init , theta_init ) = robotSetPos(setPosPub, X_INIT, Y_INIT, THETA_INIT)
                         # check init pos
-                        odomMsg = rospy.wait_for_message('/odom', Odometry)
+                        odomMsg = rospy.wait_for_message('/robot/robotnik_base_control/odom', Odometry)
                         ( x , y ) = getPosition(odomMsg)
                         theta = degrees(getRotation(odomMsg))
                         print(theta, theta_init)

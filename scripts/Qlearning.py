@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-
+# Qlearning
 import numpy as np
 from math import *
 from std_msgs.msg import String
@@ -11,9 +11,10 @@ STATE_SPACE_IND_MIN = 1 - 1
 ACTIONS_IND_MAX = 2
 ACTIONS_IND_MIN = 0
 
-ANGLE_MAX = 360 - 1
+ANGLE_MAX = 270 - 1
 ANGLE_MIN = 1 - 1
 HORIZON_WIDTH = 75
+MIDDLE = 135 - 1
 
 T_MIN = 0.001
 
@@ -119,8 +120,10 @@ def getReward(action, prev_action, lidar, prev_lidar, crash):
         terminal_state = True
         reward = -100
     else:
-        lidar_horizon = np.concatenate((lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
-        prev_lidar_horizon = np.concatenate((prev_lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],prev_lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
+        #lidar_horizon = np.concatenate((lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
+        lidar_horizon = lidar[MIDDLE - HORIZON_WIDTH:MIDDLE + HORIZON_WIDTH][::-1]
+        #prev_lidar_horizon = np.concatenate((prev_lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],prev_lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
+        prev_lidar_horizon = prev_lidar[MIDDLE - HORIZON_WIDTH:MIDDLE + HORIZON_WIDTH][::-1]
         terminal_state = False
         # Reward from action taken = fowrad -> +0.2 , turn -> -0.1
         if action == 0:
@@ -153,3 +156,4 @@ def updateQTable(Q_table, state_ind, action, reward, next_state_ind, alpha, gamm
     else:
         status = 'updateQTable => INVALID STATE INDEX'
     return ( Q_table, status )
+

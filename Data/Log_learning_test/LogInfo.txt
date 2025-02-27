@@ -1,0 +1,550 @@
+
+SIMULATION START ==> 27/02/2025 22:15:47
+
+
+---------------------------------------
+
+Episode 1 ==> CRASH {1.19,-0.23,12.10}    27/02/2025 22:15:56
+episode time: 3.69 s (avg step: 0.03 s) 
+episode steps: 127 
+episode reward: -126.80 
+episode max | avg | min reward: 0.40 | -1.01 | -100.00 
+EPSILON = 0.900000 
+
+---------------------------------------
+
+Episode 2 ==> CRASH {2.46,0.41,26.09}    27/02/2025 22:16:06
+episode time: 3.96 s (avg step: 0.03 s) 
+episode steps: 139 
+episode reward: -122.90 
+episode max | avg | min reward: 0.40 | -0.89 | -100.00 
+EPSILON = 0.864000 
+
+---------------------------------------
+
+Episode 3 ==> CRASH {3.76,1.29,34.16}    27/02/2025 22:16:18
+episode time: 4.38 s (avg step: 0.03 s) 
+episode steps: 157 
+episode reward: -125.40 
+episode max | avg | min reward: 0.40 | -0.80 | -100.00 
+EPSILON = 0.829440 
+
+---------------------------------------
+
+Episode 4 ==> CRASH {5.02,2.13,39.35}    27/02/2025 22:16:30
+episode time: 4.38 s (avg step: 0.03 s) 
+episode steps: 153 
+episode reward: -128.20 
+episode max | avg | min reward: 0.40 | -0.84 | -100.00 
+EPSILON = 0.796262 
+
+---------------------------------------
+
+Episode 5 ==> CRASH {6.13,3.03,26.11}    27/02/2025 22:16:41
+episode time: 4.08 s (avg step: 0.03 s) 
+episode steps: 148 
+episode reward: -123.70 
+episode max | avg | min reward: 0.40 | -0.84 | -100.00 
+EPSILON = 0.764412 
+
+---------------------------------------
+
+Episode 6 ==> CRASH {7.35,3.87,30.91}    27/02/2025 22:16:52
+episode time: 4.25 s (avg step: 0.03 s) 
+episode steps: 147 
+episode reward: -124.80 
+episode max | avg | min reward: 0.40 | -0.85 | -100.00 
+EPSILON = 0.733835 
+
+---------------------------------------
+
+Episode 7 ==> CRASH {8.59,4.74,30.92}    27/02/2025 22:17:03
+episode time: 4.29 s (avg step: 0.03 s) 
+episode steps: 151 
+episode reward: -123.90 
+episode max | avg | min reward: 0.40 | -0.83 | -100.00 
+EPSILON = 0.704482 
+
+---------------------------------------
+
+Episode 8 ==> CRASH {9.95,5.65,66.03}    27/02/2025 22:17:15
+episode time: 4.75 s (avg step: 0.03 s) 
+episode steps: 171 
+episode reward: -118.80 
+episode max | avg | min reward: 0.40 | -0.70 | -100.00 
+EPSILON = 0.676303 
+
+---------------------------------------
+
+Episode 9 ==> CRASH {10.80,7.10,52.53}    27/02/2025 22:17:27
+episode time: 4.84 s (avg step: 0.03 s) 
+episode steps: 162 
+episode reward: -118.00 
+episode max | avg | min reward: 0.40 | -0.73 | -100.00 
+EPSILON = 0.649251 
+
+---------------------------------------
+
+Episode 10 ==> CRASH {11.98,8.34,35.66}    27/02/2025 22:17:40
+episode time: 4.67 s (avg step: 0.03 s) 
+episode steps: 168 
+episode reward: -117.90 
+episode max | avg | min reward: 0.40 | -0.71 | -100.00 
+EPSILON = 0.623281 
+
+---------------------------------------
+
+Episode 11 ==> CRASH {15.59,11.65,50.13}    27/02/2025 22:18:16
+episode time: 13.44 s (avg step: 0.03 s) 
+episode steps: 482 
+episode reward: -140.00 
+episode max | avg | min reward: 0.40 | -0.29 | -100.00 
+EPSILON = 0.598349 
+
+---------------------------------------
+
+Episode 12 ==> CRASH {19.51,14.04,58.87}    27/02/2025 22:18:50
+episode time: 12.94 s (avg step: 0.03 s) 
+episode steps: 458 
+episode reward: -144.10 
+episode max | avg | min reward: 0.40 | -0.32 | -100.00 
+EPSILON = 0.574415 
+
+---------------------------------------
+
+Episode 13 ==> CRASH {19.67,15.32,96.78}    27/02/2025 22:19:00
+episode time: 3.77 s (avg step: 0.03 s) 
+episode steps: 132 
+episode reward: -127.20 
+episode max | avg | min reward: 0.40 | -0.97 | -100.00 
+EPSILON = 0.551439 
+
+---------------------------------------
+
+Episode 14 ==> CRASH {21.56,19.39,69.07}    27/02/2025 22:19:33
+episode time: 12.64 s (avg step: 0.03 s) 
+episode steps: 450 
+episode reward: -136.40 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.529381 
+
+---------------------------------------
+
+Episode 15 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:20:12
+episode time: 13.70 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -48.20 
+episode max | avg | min reward: 0.40 | -0.10 | -0.30 
+EPSILON = 0.508206 
+
+---------------------------------------
+
+Episode 16 ==> CRASH {24.26,25.53,77.45}    27/02/2025 22:20:25
+episode time: 5.06 s (avg step: 0.03 s) 
+episode steps: 177 
+episode reward: -118.90 
+episode max | avg | min reward: 0.40 | -0.68 | -100.00 
+EPSILON = 0.487878 
+
+---------------------------------------
+
+Episode 17 ==> CRASH {24.45,26.97,85.32}    27/02/2025 22:20:36
+episode time: 4.02 s (avg step: 0.03 s) 
+episode steps: 145 
+episode reward: -123.50 
+episode max | avg | min reward: 0.40 | -0.86 | -100.00 
+EPSILON = 0.468363 
+
+---------------------------------------
+
+Episode 18 ==> CRASH {24.42,28.36,90.62}    27/02/2025 22:20:46
+episode time: 3.78 s (avg step: 0.03 s) 
+episode steps: 130 
+episode reward: -122.30 
+episode max | avg | min reward: 0.40 | -0.95 | -100.00 
+EPSILON = 0.449628 
+
+---------------------------------------
+
+Episode 19 ==> CRASH {24.26,29.80,96.00}    27/02/2025 22:20:56
+episode time: 3.94 s (avg step: 0.03 s) 
+episode steps: 139 
+episode reward: -123.10 
+episode max | avg | min reward: 0.40 | -0.89 | -100.00 
+EPSILON = 0.431643 
+
+---------------------------------------
+
+Episode 20 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:21:34
+episode time: 13.58 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -46.00 
+episode max | avg | min reward: 0.40 | -0.09 | -0.30 
+EPSILON = 0.414377 
+
+---------------------------------------
+
+Episode 21 ==> CRASH {21.15,38.64,141.45}    27/02/2025 22:22:10
+episode time: 13.30 s (avg step: 0.03 s) 
+episode steps: 483 
+episode reward: -147.30 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.397802 
+
+---------------------------------------
+
+Episode 22 ==> CRASH {19.87,39.63,130.93}    27/02/2025 22:22:22
+episode time: 4.22 s (avg step: 0.03 s) 
+episode steps: 151 
+episode reward: -118.40 
+episode max | avg | min reward: 0.40 | -0.79 | -100.00 
+EPSILON = 0.381890 
+
+---------------------------------------
+
+Episode 23 ==> CRASH {18.76,40.41,177.00}    27/02/2025 22:22:33
+episode time: 4.02 s (avg step: 0.03 s) 
+episode steps: 138 
+episode reward: -124.50 
+episode max | avg | min reward: 0.40 | -0.91 | -100.00 
+EPSILON = 0.366614 
+
+---------------------------------------
+
+Episode 24 ==> CRASH {17.44,40.14,-162.69}    27/02/2025 22:22:44
+episode time: 3.85 s (avg step: 0.03 s) 
+episode steps: 136 
+episode reward: -127.10 
+episode max | avg | min reward: 0.10 | -0.94 | -100.00 
+EPSILON = 0.351950 
+
+---------------------------------------
+
+Episode 25 ==> CRASH {12.89,39.95,168.89}    27/02/2025 22:23:20
+episode time: 12.81 s (avg step: 0.03 s) 
+episode steps: 454 
+episode reward: -141.70 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.337872 
+
+---------------------------------------
+
+Episode 26 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:23:56
+episode time: 13.53 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -57.80 
+episode max | avg | min reward: 0.40 | -0.12 | -0.30 
+EPSILON = 0.324357 
+
+---------------------------------------
+
+Episode 27 ==> CRASH {7.57,38.22,-112.23}    27/02/2025 22:24:09
+episode time: 4.49 s (avg step: 0.03 s) 
+episode steps: 158 
+episode reward: -131.30 
+episode max | avg | min reward: 0.40 | -0.84 | -100.00 
+EPSILON = 0.311383 
+
+---------------------------------------
+
+Episode 28 ==> CRASH {4.99,34.42,-133.44}    27/02/2025 22:24:44
+episode time: 13.06 s (avg step: 0.03 s) 
+episode steps: 475 
+episode reward: -142.60 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.298927 
+
+---------------------------------------
+
+Episode 29 ==> CRASH {3.77,33.23,-146.57}    27/02/2025 22:24:56
+episode time: 4.59 s (avg step: 0.03 s) 
+episode steps: 158 
+episode reward: -118.40 
+episode max | avg | min reward: 0.40 | -0.75 | -100.00 
+EPSILON = 0.286970 
+
+---------------------------------------
+
+Episode 30 ==> CRASH {2.29,32.48,-143.24}    27/02/2025 22:25:08
+episode time: 4.75 s (avg step: 0.03 s) 
+episode steps: 167 
+episode reward: -121.80 
+episode max | avg | min reward: 0.40 | -0.73 | -100.00 
+EPSILON = 0.275492 
+
+---------------------------------------
+
+Episode 31 ==> CRASH {1.01,31.56,-134.29}    27/02/2025 22:25:21
+episode time: 4.44 s (avg step: 0.03 s) 
+episode steps: 160 
+episode reward: -124.90 
+episode max | avg | min reward: 0.40 | -0.79 | -100.00 
+EPSILON = 0.264472 
+
+---------------------------------------
+
+Episode 32 ==> CRASH {0.22,30.37,-115.66}    27/02/2025 22:25:32
+episode time: 4.15 s (avg step: 0.03 s) 
+episode steps: 150 
+episode reward: -129.10 
+episode max | avg | min reward: 0.40 | -0.87 | -100.00 
+EPSILON = 0.253893 
+
+---------------------------------------
+
+Episode 33 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:26:11
+episode time: 14.11 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -46.40 
+episode max | avg | min reward: 0.40 | -0.09 | -0.30 
+EPSILON = 0.243737 
+
+---------------------------------------
+
+Episode 34 ==> CRASH {0.44,24.43,-31.69}    27/02/2025 22:26:21
+episode time: 4.08 s (avg step: 0.03 s) 
+episode steps: 141 
+episode reward: -124.40 
+episode max | avg | min reward: 0.40 | -0.89 | -100.00 
+EPSILON = 0.233988 
+
+---------------------------------------
+
+Episode 35 ==> CRASH {1.88,24.21,2.00}    27/02/2025 22:26:32
+episode time: 4.10 s (avg step: 0.03 s) 
+episode steps: 145 
+episode reward: -126.00 
+episode max | avg | min reward: 0.40 | -0.88 | -100.00 
+EPSILON = 0.224628 
+
+---------------------------------------
+
+Episode 36 ==> CRASH {5.96,22.20,-29.56}    27/02/2025 22:27:06
+episode time: 12.60 s (avg step: 0.03 s) 
+episode steps: 465 
+episode reward: -139.10 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.215643 
+
+---------------------------------------
+
+Episode 37 ==> CRASH {8.08,18.17,-68.91}    27/02/2025 22:27:40
+episode time: 12.73 s (avg step: 0.03 s) 
+episode steps: 455 
+episode reward: -139.20 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.207017 
+
+---------------------------------------
+
+Episode 38 ==> CRASH {7.68,13.75,-119.13}    27/02/2025 22:28:13
+episode time: 12.55 s (avg step: 0.03 s) 
+episode steps: 446 
+episode reward: -138.50 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.198737 
+
+---------------------------------------
+
+Episode 39 ==> CRASH {5.35,13.10,-177.90}    27/02/2025 22:28:31
+episode time: 7.09 s (avg step: 0.03 s) 
+episode steps: 247 
+episode reward: -120.70 
+episode max | avg | min reward: 0.40 | -0.49 | -100.00 
+EPSILON = 0.190787 
+
+---------------------------------------
+
+Episode 40 ==> CRASH {3.78,13.01,-167.81}    27/02/2025 22:28:43
+episode time: 4.38 s (avg step: 0.03 s) 
+episode steps: 156 
+episode reward: -125.30 
+episode max | avg | min reward: 0.40 | -0.81 | -100.00 
+EPSILON = 0.183156 
+
+---------------------------------------
+
+Episode 41 ==> CRASH {-0.38,15.28,162.77}    27/02/2025 22:29:19
+episode time: 13.86 s (avg step: 0.03 s) 
+episode steps: 477 
+episode reward: -148.40 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.175830 
+
+---------------------------------------
+
+Episode 42 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:29:57
+episode time: 14.20 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -30.60 
+episode max | avg | min reward: 0.40 | -0.06 | -0.30 
+EPSILON = 0.168796 
+
+---------------------------------------
+
+Episode 43 ==> CRASH {1.44,21.16,40.44}    27/02/2025 22:30:32
+episode time: 12.90 s (avg step: 0.03 s) 
+episode steps: 456 
+episode reward: -140.60 
+episode max | avg | min reward: 0.40 | -0.31 | -100.00 
+EPSILON = 0.162045 
+
+---------------------------------------
+
+Episode 44 ==> CRASH {2.18,22.41,62.50}    27/02/2025 22:30:43
+episode time: 4.21 s (avg step: 0.03 s) 
+episode steps: 135 
+episode reward: -124.60 
+episode max | avg | min reward: 0.40 | -0.93 | -100.00 
+EPSILON = 0.155563 
+
+---------------------------------------
+
+Episode 45 ==> CRASH {6.24,24.68,16.38}    27/02/2025 22:31:19
+episode time: 13.77 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -149.50 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.149340 
+
+---------------------------------------
+
+Episode 46 ==> CRASH {8.01,25.00,-5.99}    27/02/2025 22:31:32
+episode time: 5.16 s (avg step: 0.03 s) 
+episode steps: 185 
+episode reward: -123.10 
+episode max | avg | min reward: 0.40 | -0.67 | -100.00 
+EPSILON = 0.143367 
+
+---------------------------------------
+
+Episode 47 ==> CRASH {9.31,25.28,31.87}    27/02/2025 22:31:42
+episode time: 3.77 s (avg step: 0.03 s) 
+episode steps: 133 
+episode reward: -124.10 
+episode max | avg | min reward: 0.40 | -0.94 | -100.00 
+EPSILON = 0.137632 
+
+---------------------------------------
+
+Episode 48 ==> CRASH {10.29,26.39,49.02}    27/02/2025 22:31:55
+episode time: 4.01 s (avg step: 0.03 s) 
+episode steps: 146 
+episode reward: -124.60 
+episode max | avg | min reward: 0.10 | -0.86 | -100.00 
+EPSILON = 0.132127 
+
+---------------------------------------
+
+Episode 49 ==> CRASH {11.37,27.65,54.81}    27/02/2025 22:32:09
+episode time: 4.79 s (avg step: 0.03 s) 
+episode steps: 170 
+episode reward: -121.90 
+episode max | avg | min reward: 0.40 | -0.72 | -100.00 
+EPSILON = 0.126842 
+
+---------------------------------------
+
+Episode 50 ==> CRASH {12.15,29.02,62.31}    27/02/2025 22:32:21
+episode time: 4.32 s (avg step: 0.03 s) 
+episode steps: 153 
+episode reward: -123.70 
+episode max | avg | min reward: 0.40 | -0.81 | -100.00 
+EPSILON = 0.121768 
+
+---------------------------------------
+
+Episode 51 ==> CRASH {15.56,32.12,22.64}    27/02/2025 22:32:57
+episode time: 12.49 s (avg step: 0.03 s) 
+episode steps: 450 
+episode reward: -133.80 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.116897 
+
+---------------------------------------
+
+Episode 52 ==> CRASH {20.13,32.70,10.81}    27/02/2025 22:33:33
+episode time: 12.94 s (avg step: 0.03 s) 
+episode steps: 469 
+episode reward: -138.70 
+episode max | avg | min reward: 0.40 | -0.30 | -100.00 
+EPSILON = 0.112221 
+
+---------------------------------------
+
+Episode 53 ==> CRASH {24.63,31.20,-0.99}    27/02/2025 22:34:09
+episode time: 13.40 s (avg step: 0.03 s) 
+episode steps: 470 
+episode reward: -148.40 
+episode max | avg | min reward: 0.40 | -0.32 | -100.00 
+EPSILON = 0.107732 
+
+---------------------------------------
+
+Episode 54 ==> CRASH {26.34,31.18,6.04}    27/02/2025 22:34:23
+episode time: 4.78 s (avg step: 0.03 s) 
+episode steps: 169 
+episode reward: -124.20 
+episode max | avg | min reward: 0.40 | -0.74 | -100.00 
+EPSILON = 0.103423 
+
+---------------------------------------
+
+Episode 55 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:35:03
+episode time: 13.62 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -58.10 
+episode max | avg | min reward: 0.40 | -0.12 | -0.30 
+EPSILON = 0.099286 
+
+---------------------------------------
+
+Episode 56 ==> CRASH {32.33,31.59,61.07}    27/02/2025 22:35:16
+episode time: 4.36 s (avg step: 0.03 s) 
+episode steps: 156 
+episode reward: -123.50 
+episode max | avg | min reward: 0.40 | -0.80 | -100.00 
+EPSILON = 0.095315 
+
+---------------------------------------
+
+Episode 57 ==> CRASH {32.61,33.08,93.17}    27/02/2025 22:35:29
+episode time: 4.35 s (avg step: 0.03 s) 
+episode steps: 160 
+episode reward: -131.10 
+episode max | avg | min reward: 0.40 | -0.82 | -100.00 
+EPSILON = 0.091502 
+
+---------------------------------------
+
+Episode 58 ==> CRASH {32.50,34.86,106.92}    27/02/2025 22:35:44
+episode time: 5.17 s (avg step: 0.03 s) 
+episode steps: 184 
+episode reward: -126.80 
+episode max | avg | min reward: 0.40 | -0.69 | -100.00 
+EPSILON = 0.087842 
+
+---------------------------------------
+
+Episode 59 ==> CRASH {31.84,36.59,102.08}    27/02/2025 22:35:58
+episode time: 5.09 s (avg step: 0.03 s) 
+episode steps: 177 
+episode reward: -121.20 
+episode max | avg | min reward: 0.40 | -0.69 | -100.00 
+EPSILON = 0.084328 
+
+---------------------------------------
+
+Episode 60 ==> MAX STEPS PER EPISODE REACHED {500}    27/02/2025 22:36:38
+episode time: 13.68 s (avg step: 0.03 s) 
+episode steps: 500 
+episode reward: -43.70 
+episode max | avg | min reward: 0.40 | -0.09 | -0.30 
+EPSILON = 0.080955 
+
+--------------------------------------- 
+
+MAX EPISODES REACHED(60), LEARNING FINISHED ==> 27/02/2025 22:36:38
+Simulation time: 0:7:41  h/m/s 
+Real time: 0:20:50  h/m/s 
+

@@ -11,10 +11,10 @@ import numpy as np
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 
 # Q-learning speed parameters
-CONST_LINEAR_SPEED_FORWARD = 0.08
+CONST_LINEAR_SPEED_FORWARD = 0.5
 CONST_ANGULAR_SPEED_FORWARD = 0.0
-CONST_LINEAR_SPEED_TURN = 0.06
-CONST_ANGULAR_SPEED_TURN = 0.4
+CONST_LINEAR_SPEED_TURN = 0.3
+CONST_ANGULAR_SPEED_TURN = 1
 
 # Feedback control parameters
 K_RO = 2
@@ -82,7 +82,7 @@ def robotStop(velPub):
 def robotSetPos(setPosPub, x, y, theta):
     checkpoint = ModelState()
 
-    checkpoint.model_name = 'turtlebot3_burger'
+    checkpoint.model_name = 'robot'
 
     checkpoint.pose.position.x = x
     checkpoint.pose.position.y = y
@@ -122,7 +122,7 @@ def robotSetRandomPos(setPosPub):
 
     checkpoint = ModelState()
 
-    checkpoint.model_name = 'turtlebot3_burger'
+    checkpoint.model_name = 'robot'
 
     checkpoint.pose.position.x = x
     checkpoint.pose.position.y = y

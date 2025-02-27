@@ -1,17 +1,17 @@
 #! /usr/bin/env python
-
+# scan_node
 import rospy
 import matplotlib.pyplot as plt
 from datetime import datetime
 
 import sys
-sys.path.insert(0, '/home/maestro/catkin_ws/src/master_rad/scripts')
+sys.path.insert(0, '/home/admin520/summit_ws/src/master_rad/scripts')
 
 from Qlearning import *
 from Lidar import *
 from Control import *
 
-ANGLE_MAX = 360 - 1
+ANGLE_MAX = 270 - 1
 ANGLE_MIN = 1 - 1
 HORIZON_WIDTH = 75
 
@@ -20,6 +20,7 @@ MAX_SIMULATION_TIME = float('inf')
 
 if __name__ == '__main__':
     try:
+        # Qlearning
         state_space = createStateSpace()
 
         rospy.init_node('scan_node', anonymous = False)
@@ -48,7 +49,7 @@ if __name__ == '__main__':
 
         # main loop
         while not rospy.is_shutdown():
-            msgScan = rospy.wait_for_message('/scan', LaserScan)
+            msgScan = rospy.wait_for_message('/robot/front_laser/scan', LaserScan)
 
             scan_time = (rospy.Time.now() - t).to_sec()
             sim_time = (rospy.Time.now() - t_start).to_sec()
@@ -74,7 +75,9 @@ if __name__ == '__main__':
                 if object_nearby:
                     print('OBJECT NEARBY !')
 
-                lidar_horizon = np.concatenate((lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
+                #lidar_horizon = np.concatenate((lidar[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],lidar[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
+                #lidar_horizon = lidar[MIDDLE - HORIZON_WIDTH:MIDDLE + HORIZON_WIDTH]
+                lidar_horizon = lidar[MIDDLE - HORIZON_WIDTH:MIDDLE + HORIZON_WIDTH][::-1]
                 #angles_horizon = np.concatenate((angles[(ANGLE_MIN + HORIZON_WIDTH):(ANGLE_MIN):-1],angles[(ANGLE_MAX):(ANGLE_MAX - HORIZON_WIDTH):-1]))
                 angles_horizon = np.linspace(90+HORIZON_WIDTH, 90-HORIZON_WIDTH, 150)
 
@@ -115,3 +118,4 @@ if __name__ == '__main__':
         rospy.signal_shutdown('End of simulation')
 
         pass
+
